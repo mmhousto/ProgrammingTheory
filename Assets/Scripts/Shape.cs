@@ -6,6 +6,8 @@ using TMPro;
 public class Shape : MonoBehaviour
 {
     public TextMeshProUGUI nameLabel;
+
+    // ENCAPSULATION
     public string ShapeName { get; protected set; }
     public Color ShapeColor { get; protected set; }
 
@@ -14,11 +16,13 @@ public class Shape : MonoBehaviour
         DisplayText();
     }
 
+    // POLYMORPHISM
     protected virtual void DisplayText()
     {
         nameLabel.text = ShapeName;
     }
 
+    // ABSTRACTION
     protected void SetProperties(string name, Color color)
     {
         ShapeName = name;
